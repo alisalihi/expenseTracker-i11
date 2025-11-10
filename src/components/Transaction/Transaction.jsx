@@ -5,14 +5,12 @@ const Transaction = ({ transaction }) => {
 
   const { title, category, amount, date } = transaction;
 
-  // ✅ Ensure amount is a number
   const numericAmount = Number(amount);
   const formattedAmount =
     !isNaN(numericAmount) && numericAmount !== null
       ? numericAmount.toFixed(2)
       : "0.00";
 
-  // ✅ Safely format date
   const formattedDate = date
     ? new Date(date).toLocaleDateString("en-US", {
         year: "numeric",
@@ -41,7 +39,6 @@ const Transaction = ({ transaction }) => {
         </p>
       </div>
 
-      {/* Example action buttons (optional) */}
       <div className="flex justify-between mt-4">
         <button className="bg-black text-white px-4 py-2 rounded hover:bg-gray-800 transition">
           Edit
