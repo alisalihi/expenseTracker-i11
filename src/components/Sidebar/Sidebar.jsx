@@ -2,9 +2,9 @@ import React from 'react';
 
 const Sidebar = () => {
   const menuItems = [
-    { id: 1, label: 'Home', icon: '🏠' },
-    { id: 2, label: 'Create New Transaction', icon: '➕' },
-    { id: 3, label: 'Login/Signup', icon: '👤' },
+    { id: 1, label: 'Home'},
+    { id: 2, label: 'Create New Transaction' },
+    { id: 3, label: 'Login/Signup' },
   ];
 
   return (
@@ -16,7 +16,6 @@ const Sidebar = () => {
               <button
                 className="w-full text-left px-6 py-3 text-black hover:bg-gray-100 transition-colors duration-200 flex items-center gap-3"
               >
-                <span className="text-xl">{item.icon}</span>
                 <span className="font-medium">{item.label}</span>
               </button>
             </li>
