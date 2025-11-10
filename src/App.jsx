@@ -1,37 +1,50 @@
-import { useState } from "react";
-import Header from "./components/header";
+import Header from "./components/Header/Header";
 import Sidebar from "./components/Sidebar/Sidebar";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import "./App.css";
+import Transaction from "./components/Transaction/Transaction";
 
 function App() {
-  const [count, setCount] = useState(0);
+  const sampleTransactions = [
+    {
+      id: 1,
+      title: "Grocery Shopping",
+      category: "Food",
+      amount: -85.5,
+      date: "2025-11-08",
+    },
+    {
+      id: 2,
+      title: "Salary",
+      category: "Income",
+      amount: 3000.0,
+      date: "2025-11-01",
+    },
+    {
+      id: 3,
+      title: "Electric Bill",
+      category: "Utilities",
+      amount: -120.0,
+      date: "2025-11-05",
+    },
+  ];
 
   return (
     <>
       <Header />
       <Sidebar />
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+
+      <main className="ml-64 mt-16 p-6">
+        <div className="space-y-4">
+          {sampleTransactions.map((transaction) => (
+            <Transaction
+              key={transaction.id}
+              title={transaction.title}
+              category={transaction.category}
+              amount={transaction.amount}
+              date={transaction.date}
+            />
+          ))}
+        </div>
+      </main>
     </>
   );
 }
