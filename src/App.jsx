@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Header from "./components/header";
+import Sidebar from "./components/Sidebar/Sidebar";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
@@ -10,6 +11,7 @@ function App() {
   return (
     <>
       <Header />
+      <Sidebar />
       <div>
         <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
