@@ -2,7 +2,6 @@ import React from "react";
 import Transaction from "../Transaction/Transaction";
 
 const Home = () => {
-  // Sample transaction data array for testing
   const transactions = [
     {
       id: 1,
@@ -90,7 +89,6 @@ const Home = () => {
     },
   ];
 
-  // ✅ Ensure numeric values before calculations
   const totalIncome = transactions
     .filter((t) => Number(t.amount) > 0)
     .reduce((sum, t) => sum + Number(t.amount), 0);
@@ -102,8 +100,7 @@ const Home = () => {
   const balance = totalIncome - totalExpenses;
 
   return (
-    <div className="flex flex-col h-full p-4 md:p-6 bg-gray-50">
-      {/* Summary Cards */}
+    <div className="flex flex-col">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
         <div className="bg-white border-2 border-gray-300 rounded-lg p-4 shadow-md">
           <h3 className="text-sm font-medium text-gray-600 mb-1">
@@ -137,7 +134,6 @@ const Home = () => {
         </div>
       </div>
 
-      {/* Transactions Header */}
       <div className="flex items-center justify-between mb-4">
         <h2 className="text-2xl font-bold text-black">Recent Transactions</h2>
         <span className="text-sm text-gray-600">
@@ -145,13 +141,10 @@ const Home = () => {
         </span>
       </div>
 
-      {/* Scrollable Transaction List */}
-      <div className="flex-1 overflow-y-auto">
-        <div className="space-y-4 pb-8">
-          {transactions.map((transaction) => (
-            <Transaction key={transaction.id} transaction={transaction} />
-          ))}
-        </div>
+      <div className="space-y-4">
+        {transactions.map((transaction) => (
+          <Transaction key={transaction.id} transaction={transaction} />
+        ))}
       </div>
     </div>
   );
