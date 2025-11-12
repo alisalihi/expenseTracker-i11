@@ -11,9 +11,10 @@ function App() {
       <div className="flex flex-1 pt-16">
         <Sidebar />
 
-        {/* Main content area */}
-        <main className="flex-1 ml-64 p-6 bg-gray-50 overflow-hidden">
-          <Home />
+        <main className="flex-1 ml-64 overflow-y-auto bg-gray-50">
+          <div className="p-6">
+            <Home />
+          </div>
         </main>
       </div>
     </div>
