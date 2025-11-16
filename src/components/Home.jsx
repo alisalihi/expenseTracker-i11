@@ -1,5 +1,5 @@
 import React from "react";
-import Transaction from "../Transaction/Transaction";
+import Transaction from "./Transaction";
 
 const Home = () => {
   const transactions = [

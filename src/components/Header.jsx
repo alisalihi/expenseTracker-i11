@@ -1,5 +1,5 @@
 import React from "react";
-import inspireLogo from "../../assets/inspireLogo.webp";
+import inspireLogo from "../assets/inspireLogo.webp";
 
 const Header = ({ onMenuClick }) => {
   return (
