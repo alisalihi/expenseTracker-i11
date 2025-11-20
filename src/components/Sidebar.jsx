@@ -1,5 +1,3 @@
-import React from "react";
-
 const Sidebar = ({ isOpen, onClose }) => {
   const menuItems = [
     { id: 1, label: "Home", icon: (

@@ -1,5 +1,3 @@
-import React, { useState } from 'react';
-
 const Transaction = ({ transaction }) => {
   if (!transaction) return null;
 
