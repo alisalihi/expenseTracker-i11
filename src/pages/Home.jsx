@@ -1,5 +1,4 @@
-// src/pages/Home.jsx - WITH TYPE SELECTOR IN EDIT MODAL
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Transaction from "../components/Transaction";
 import Modal from "../components/Modal";

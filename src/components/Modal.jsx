@@ -1,5 +1,4 @@
-// src/components/Modal.jsx
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 
 const Modal = ({ isOpen, onClose, title, children }) => {
   useEffect(() => {

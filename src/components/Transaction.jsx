@@ -1,6 +1,3 @@
-// src/components/Transaction.jsx
-import React from "react";
-
 const Transaction = ({
   transaction,
   categoryName,

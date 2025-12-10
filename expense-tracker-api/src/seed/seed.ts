@@ -1,4 +1,3 @@
-// src/database/seed.ts - UPDATED WITH REALISTIC CATEGORIES
 import 'reflect-metadata';
 import AppDataSource from '../../ormconfig';
 import { Category } from '../entities/category';
