@@ -1,4 +1,3 @@
-// src/components/__tests__/Transaction.test.tsx
 import { render, screen, fireEvent } from "@testing-library/react";
 import Transaction from "../Transaction";
 import { Expense } from "../../types";

@@ -1,4 +1,3 @@
-// src/components/__tests__/PrivateRoute.test.tsx
 import { render, screen } from "@testing-library/react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import PrivateRoute from "../PrivateRoute";

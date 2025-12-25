@@ -1,4 +1,3 @@
-// src/components/__tests__/Sidebar.test.tsx
 import { render, screen, fireEvent, waitFor } from "@testing-library/react";
 import { BrowserRouter } from "react-router-dom";
 import Sidebar from "../Sidebar";
