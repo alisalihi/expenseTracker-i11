@@ -1,4 +1,4 @@
-import  { useState } from "react";
+import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { useAuth } from "../contexts/AuthContext";
 
@@ -14,7 +14,8 @@ const Login = () => {
     setLoading(true);
     setError("");
 
-    const result = await login(formData.email, formData.password);
+    const { email, password } = formData;
+    const result = await login(email, password);
 
     if (result.success) {
       navigate("/");
